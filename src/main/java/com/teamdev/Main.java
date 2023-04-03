@@ -1,7 +1,11 @@
 package com.teamdev;
 
+import static spark.Spark.*;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        port(8080);
+
+        get("/main", (req, res) -> "Hello world!");
     }
 }
